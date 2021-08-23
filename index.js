@@ -1,7 +1,8 @@
 // Code your solution here
-function findMatching(names, str) {
+function findMatching(names, str) { 
+    /* 
     str = str.split(" "); 
-    let result = []; 
+    let result = [];
     for (let i = 0; i < names.length; i++) { 
         for (let j = 0; j < str.length; j++) {
             //result = names.filter(); 
@@ -12,9 +13,11 @@ function findMatching(names, str) {
     }
     return result; 
 }
-//console.log(names.filter(findMatchingNames(str)); 
+*/
+    return names.filter(possibleMatch => possibleMatch.toLowerCase() === str.toLowerCase())}
 
 function fuzzyMatch(names, str) {
+    /*
     str = str.split(" "); 
     let result = []; 
     for (let i = 0; i < names.length; i++) {
@@ -25,6 +28,9 @@ function fuzzyMatch(names, str) {
         }
     }
     return result; 
+
+*/
+    return names.filter(name => name[0] === str)
 }
 
 function matchName(driver, str) {
