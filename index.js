@@ -17,14 +17,7 @@ function findMatching(names, str) {
     return names.filter(cb => cb.toLowerCase() === str.toLowerCase())}
 
 function fuzzyMatch(names, str) {
-    function firstTwo(names, str) {
-        for (let i = 0; i < names.length; i++) {
-            if (names[i].indexOf(str) > 2) {
-                return names[i]; 
-            }
-        }
-    }
-    return names.filter(firstTwo); 
+    return names.filter(name => name.indexOf(str) === 0); 
 }
 
 
